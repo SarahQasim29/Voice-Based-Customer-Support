@@ -6,27 +6,27 @@ Deployed Frontend on Vercel: https://voice-based-customer-support-bvad.vercel.ap
 
 # Project Documentation
 
-## 🏗️ Architecture
+## -> Architecture
 - **Frontend (React)**: Handles voice/text input, sends requests to backend, shows JSON results.
 - **Backend (Node.js + Express)**: Provides `/api/conversation` endpoint, calls Gemini API, returns structured JSON.
 - **Gemini API**: Processes text and generates ticket information in JSON format.
 
-## 🎤 Gemini Voice Integration
+## -> Gemini Voice Integration
 - Voice input captured with browser’s `webkitSpeechRecognition`.
 - Transcribed text is sent to backend.
 - Backend uses Gemini (`gemini-2.5-flash`) to generate structured JSON.
 
-## 🖥️ Frontend Responsibilities
+## -> Frontend Responsibilities
 - **Conversation.js**: Captures input (voice or text) and sends it to backend.
 - **JsonModal.js**: Displays JSON output in a modal.
 - **App.js**: Manages state and coordinates components.
 
-## ⚙️ Backend Responsibilities
+## -> Backend Responsibilities
 - Receives text from frontend.
 - Calls Gemini API with a prompt.
 - Ensures JSON response format and sends it back to frontend.
 
-## 📦 JSON Output Generation
+## -> JSON Output Generation
 Gemini always returns JSON with:
 - `ticketId` → Random ID like `ORD12345`
 - `customerName` → Extracted or `"Unknown"`
