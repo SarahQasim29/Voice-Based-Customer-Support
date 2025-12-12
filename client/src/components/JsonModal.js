@@ -1,0 +1,21 @@
+import React from "react";
+
+function JsonModal({ jsonData, onClose }) {
+  return (
+    <div className="modal show d-block" tabIndex="-1">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title">Ticket Summary (JSON)</h5>
+            <button type="button" className="btn-close" onClick={onClose}></button>
+          </div>
+          <div className="modal-body">
+            <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default JsonModal;
