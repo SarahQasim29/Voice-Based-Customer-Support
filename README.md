@@ -33,7 +33,7 @@ Gemini always returns JSON with:
 - `issue` → Summarized problem
 - `status` → `"Ticket created successfully"`
 
-## 🚀 Deployment Steps
+## -> Deployment Steps
 1. **Frontend**: Build React app (`npm run build`) and deploy (Netlify, Vercel, etc.).
 2. **Backend**: Deploy Express server (Render, Railway, etc.), set `GEMINI_API_KEY` in environment.
 3. **Integration**: Update frontend API URL to point to deployed backend.
